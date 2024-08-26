@@ -1,11 +1,11 @@
 package_name: 'gazebo_satellite_terrain'
 
-zoom: 18
-approx_origin_lat: 55.74664268169444
-approx_origin_lon: 12.556765912443149
-tile_size_pixels: 512
-map_size: 3 # How many tiles to make the map n x n
-prefetch_terrain: True
-prespawn_terrain: True
+zoom: 18                                # Open street map zoom level, see: https://wiki.openstreetmap.org/wiki/Zoom_levels
+approx_origin_lat: 55.74664268169444    # north-south (y-axis in gazebo). Only approximate, as we will round it to center of nearest tile
+approx_origin_lon: 12.556765912443149   # east-west   (x-axis in gazebo). Only approximate, as we will round it to center of nearest tile
+tile_size_pixels: 512                   # How large are the tiles, can be seen in MapBox (or just look at the files)
+map_size: 3                             # How many tiles to make the map n x n
+prefetch_terrain: True                  # Download all terrain at start up, or spawn it under the object as it moves
+prespawn_terrain: True                  # Spawn all terrain at start up, or spawn it under the object as it moves
 gazebo_world_file: 'worlds/empty.world' # Relative to share dir
-model_name: 'satellite_tile' # Shouldnt change, this is the name of directory the model is in models/satellite_tile - the name is also in the model.sdf file
+model_name: 'satellite_tile'            # Shouldnt change, this is the name of directory the model is in models/satellite_tile - the name is also in the model.sdf file
