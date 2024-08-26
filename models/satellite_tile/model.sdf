@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.4">
+<model name="satellite_tile">
+  <static>true</static>
+    <link name="base_link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <!-- Will be overwritten by `spawn_tile.py` -->
+            <size>86.04527351190444 86.04527351190444</size>
+          </plane>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <!-- Will be overwritten by `spawn_tile.py` -->
+            <size>86.04527351190444 86.04527351190444</size>
+          </plane>
+        </geometry>
+        <material>
+            <script>
+                <uri>model://satellite_tile/materials/scripts</uri>
+                <uri>model://satellite_tile/materials/textures</uri>
+                <!-- Will be overwritten by `spawn_tile.py` -->
+                <name>tile_140214_81959</name> 
+            </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

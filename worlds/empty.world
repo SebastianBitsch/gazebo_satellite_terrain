@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- <plugin name="gazebo_no_physics_world_plugin" filename="libgazebo_no_physics_world_plugin.so"></plugin> -->
+
+    <!-- /set_entity_state isnt available in ROS2 unless added like this -->
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/gazebo</namespace>
+      </ros>
+      <update_rate>10.0</update_rate>
+    </plugin>
+
+    <scene>
+      <ambient> 0.0 0.0 0.0 1.0</ambient>
+      <shadows> 0 </shadows>
+    </scene>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <!-- <include>
+      <uri>model://ground_plane</uri>
+    </include> -->
+  </world>
+</sdf>
