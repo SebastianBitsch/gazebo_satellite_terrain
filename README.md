@@ -1,7 +1,9 @@
-# gazebo-satellite-terrain
+# ros2-gazebo-satellite-terrain
 ROS2 package for spawning and managing satellite image tiles in Gazebo to form a cohesive terrain.
 
 This whole project is an exercise in Gazebo and ROS2 quirks which is why the code looks somewhat convoluted in some places.
+
+![demo of gazebo view](.github/media/demo.png)
 
 ### Installation
 Package only tested on Mac M1 using [RoboStack](https://robostack.github.io) and on Ubuntu 24.04.

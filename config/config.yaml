@@ -4,7 +4,7 @@ zoom: 18                                # Open street map zoom level, see: https
 approx_origin_lat: 55.74664268169444    # north-south (y-axis in gazebo). Only approximate, as we will round it to center of nearest tile
 approx_origin_lon: 12.556765912443149   # east-west   (x-axis in gazebo). Only approximate, as we will round it to center of nearest tile
 tile_size_pixels: 512                   # How large are the tiles, can be seen in MapBox (or just look at the files)
-map_size: 3                             # How many tiles to make the map n x n
+map_size: 9                             # How many tiles to make the map n x n
 prefetch_terrain: True                  # Download all terrain at start up, or spawn it under the object as it moves
 prespawn_terrain: True                  # Spawn all terrain at start up, or spawn it under the object as it moves
 gazebo_world_file: 'worlds/empty.world' # Relative to share dir
