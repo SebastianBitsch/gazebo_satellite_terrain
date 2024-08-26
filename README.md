@@ -6,6 +6,14 @@ This whole project is an exercise in Gazebo and ROS2 quirks which is why the cod
 ### Installation
 Package only tested on Mac M1 using [RoboStack](https://robostack.github.io) and on Ubuntu 24.04.
 
+- Update the `config.yaml` with map size, tile size, zoom, etc.
+- Create a `.env` file with the mapbox parameters:
+    ```text
+    MAPBOX_APIKEY=...
+    MAPBOX_USERNAME=...
+    MAPBOX_STYLENAME=...
+    ```
+
 **Instructions**
 1. TODO
 2. ...
