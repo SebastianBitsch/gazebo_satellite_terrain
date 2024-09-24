@@ -74,8 +74,9 @@ class GazeboSatelliteTileSpawner(GazeboObjectSpawner):
                 f.write(response.content)
 
         else:
-            self.get_logger().info(f"{self.node_name}: Error downloading image: {response.status_code}: {response.reason}")
-
+            message = f"{self.node_name}: Error downloading image: {response.status_code}: {response.reason}"
+            self.get_logger().info(message)
+            raise ConnectionError(message)
 
     def set_tile_model_size(self, new_size: float) -> None:
         """
